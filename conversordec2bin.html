@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa que converte decimal para binário</title>
+</head>
+<body>
+    <h1>Conversor de decimal para binário em Javascript</h1>
+    <br>
+    <h1>Converte o valor decimal digitado para um valor binário.</h1>
+    <br>
+    Digite o número à ser convertido de decimal para: <input type="number" name="txtnumero" id="txtnumero"> 
+    <input type="button" value="Realizar Sorteio" onclick="converte2Binario()">
+    <div id="res">
+    </div>
+ 
+    <script>
+        function converte2Binario() {
+            var txtnum = window.document.getElementById('txtnumero')
+            var num =Number(txtnum.value)
+            var res = window.document.getElementById('res')
+            //var randomNumero = Math.floor((Math.random() * (num))+1);
+            //-------------
+                 //var val = 36
+        var vetor1 = []
+        var d = num
+        var b 
+        //console.log(typeof d)
+         while (d > 0){
+                b = parseInt(d % 2)
+                   //console.log(b)
+                   vetor1.push(b)
+               d = parseInt(d / 2)
+                //console.log(d)
+         }
+        //console.log(vetor1)
+
+        var valbinario = vetor1.reverse()
+
+        var valorbinario = valbinario.join("")
+
+        //console.log(typeof valorbinario)
+
+        console.log(`o valor ${num} em binário é ${valorbinario}`)
+
+        //-------------------
+       res.innerHTML = `<p>O valor ${num} em binário é ${valorbinario}.</p>`
+      }
+    </script>
+</body>
+</html>
