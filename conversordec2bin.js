@@ -3,9 +3,9 @@
         var txtnum = window.document.getElementById('txtnumero')
         var num =Number(txtnum.value)
         var res = window.document.getElementById('res')
-    //var randomNumero = Math.floor((Math.random() * (num))+1);
-    //-------------
-    //Criando vetor para poder inserir os restos das divisões. 
+//var randomNumero = Math.floor((Math.random() * (num))+1);
+
+//Criando vetor para poder inserir os restos das divisões. 
         var vetor1 = []
         var d = num
         var b 
